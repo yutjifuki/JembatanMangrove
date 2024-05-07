@@ -1,0 +1,201 @@
+/* #########MEDIA QUERY */
+@media (max-width: 992px) {
+  /* navigasi 0 */
+  nav {
+    padding-inline: var(--padding-4);
+  }
+
+  nav .container {
+    padding-inline: var(--padding-5);
+  }
+  /* navigasi 1 */
+
+  /* main 0 */
+  main :where(.section-1, .section-2, .section-4, .section-5) {
+    padding-inline: 0;
+  }
+  /* tentang 0 */
+  main .tentang {
+    gap: calc(30px + var(--gap-9));
+  }
+  /* tentang 1 */
+  /* main 1 */
+}
+
+@media (max-width: 768px) {
+  /* navigasi 0 */
+  nav .hamburger {
+    display: block !important;
+    position: relative;
+    z-index: 5;
+  }
+
+  nav input[type="checkbox"],
+  nav .hamburger-lines {
+    display: block;
+    cursor: pointer;
+  }
+
+  nav input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    z-index: 1;
+    opacity: 0;
+  }
+
+  nav .hamburger-lines {
+    height: 20px;
+    width: 35px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  nav .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: var(--color-white);
+  }
+
+  nav .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  nav .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  nav .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  nav input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(30.5deg);
+  }
+
+  nav input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  nav input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-30.5deg);
+  }
+
+  body:has(nav .hamburger input[type="checkbox"]:checked) nav ul {
+    transform: translatex(0);
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-6);
+    background-image: linear-gradient(
+      to bottom,
+      var(--color-purple) 10%,
+      var(--color-cyan) 90%
+    );
+    background-repeat: no-repeat;
+    padding-top: var(--padding-9);
+    inset: 0;
+    height: 100vh;
+    z-index: 1;
+    position: absolute;
+    transform: translatex(100%);
+    transition: 0.5s;
+  }
+  /* navigasi 1 */
+
+  /* header 0 */
+  header .header-text h1 {
+    font-size: calc(clamp(0.5vw, 100%, 1.5vw) + var(--font-size-1));
+    line-height: 95%;
+  }
+
+  header .header-text h3 {
+    font-size: calc(5px + var(--font-size-2));
+  }
+
+  header .header-text a {
+    font-size: var(--font-size-6);
+    padding: var(--padding-3) var(--padding-4);
+  }
+  /* header 1 */
+
+  /* main 0 */
+  /* tentang 0 */
+  main .tentang {
+    grid-template-columns: 1fr;
+    gap: calc(20px + var(--gap-9));
+  }
+
+  main .tentang .image_tentang {
+    aspect-ratio: 1;
+  }
+
+  main .tentang .desc h1 {
+    text-align: center;
+  }
+
+  main .tentang .desc .info {
+    gap: var(--gap-4);
+  }
+  /* tentang 1 */
+
+  /* layanan 0 */
+  main .section-2 .layanan .desc-1 {
+    width: 100%;
+  }
+  /* layanan 1 */
+
+  /* Galeri 0 */
+  main .section-4 .galery-content {
+    width: 100%;
+  }
+
+  main .section-4 .galery-overlay .overlay {
+    padding: var(--padding-8);
+  }
+  /* Galeri 1 */
+  /* main 1 */
+
+  /* general set 0 */
+  .regular-text {
+    font-size: var(--font-size-5);
+  }
+  /* general set 1 */
+}
+
+@media (max-width: 576px) {
+  /* header 0 */
+  header .header-text h1 {
+    font-size: calc(clamp(1vw, 100%, 1.3vw) + var(--font-size-1));
+  }
+  /* header 1 */
+
+  /* main 0 */
+  /* main 1 */
+
+  /* footer 0 */
+  footer .footer .footer-tittle {
+    text-align: center;
+  }
+
+  footer .footer .footer-tittle h1 {
+    font-size: calc(clamp(5px, 70%, 7px) + var(--font-size-1));
+    font-family: var(--font-script-med);
+    transform: translateY(-2px);
+    font-weight: 100;
+  }
+
+  footer .footer .footer-sosmed .sosmed {
+    justify-content: center;
+  }
+  /* footer 1 */
+}
