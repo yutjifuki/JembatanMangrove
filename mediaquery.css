@@ -19,6 +19,12 @@
     gap: calc(30px + var(--gap-9));
   }
   /* tentang 1 */
+
+  /* galery 0 */
+  main .section-4 .galery-overlay .overlay img {
+    width: 75vw;
+  }
+  /* galery 1 */
   /* main 1 */
 }
 
