@@ -924,6 +924,15 @@ footer .footer .footer-sosmed .instagram:hover {
 footer .footer .footer-sosmed .sosmed span {
   font-size: var(--font-size-7);
 }
+
+footer > span {
+  font-size: var(--font-size-7);
+  padding: var(--padding-3) 0;
+  display: inline-block;
+  border-top: thick double var(--color-white);
+  width: 100%;
+  text-align: center;
+}
 /* footer 1 */
 
 /* general set 0*/

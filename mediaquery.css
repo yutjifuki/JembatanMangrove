@@ -189,6 +189,10 @@
   /* main 1 */
 
   /* footer 0 */
+  footer .footer {
+    flex-direction: column-reverse;
+  }
+
   footer .footer .footer-tittle {
     text-align: center;
   }
